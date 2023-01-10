@@ -50,6 +50,15 @@
         <p>Tous les jours de 11h à 20h, sauf le lundi.</p>
         <p>Nocturne le mardi, jusqu'à 22h.</p>
         <p>La fermeture des salles débute à 19h45 (21h45 les mardis)</p>
+        <p class="p__underline">Tarifs :</p>
+        <ul class="tarifs" x-data="{ data: {} }" x-init="fetch('../src/JSON/data.json').then(response => response.json()).then(json => data = json)">
+            <template x-for="obj of data">
+              <li>
+                  <span x-text="obj.nom">nom</span> : 
+                  <span x-text="obj.prix">tarif</span>
+              </li>
+            </template>
+        </ul>
         </section>
     </main>
 </body>

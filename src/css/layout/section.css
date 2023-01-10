@@ -28,3 +28,20 @@ section {
     margin: 0 50px 0 23px;
     top: 515px;
 }
+
+.p__underline {
+    text-decoration: underline;
+}
+
+.tarifs {
+    padding-left: 0;
+    font-family: Outfit;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 0em;
+}
+
+.tarifs span:first-child {
+    font-weight: 300;
+}
