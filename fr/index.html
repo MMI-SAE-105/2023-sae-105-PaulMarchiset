@@ -19,15 +19,15 @@
         </div>
         <nav x-show="menuIsOpen" x-transition.duration.800ms class="menu">
             <div class="menu__top">
-                <a href="index.html"><img class="menu__icon" src="/public/icons/logo_realistic.svg" alt="fermer le menu"></a>
+                <a href="index.html"><img class="header__logo" src="/public/icons/logo_realistic.svg" alt="retourner à l'accueil"></a>
                 <div @click="menuIsOpen = ! menuIsOpen"><img class="menu__close" src="/public/icons/close.svg" alt="fermer le menu"></div>
             </div>
             <ul>
-                <li><a href="index.html#info">INFORMATIONS</a></li>
-                <li><a href="#">BILLETTERIE</a></li>
-                <li><a href="works.html">OEUVRES</a></li>
-                <li><a href="artists.html">ARTISTES</a></li>
-                <li><a href="index.html#contact">CONTACT</a></li>
+                <li><h3><a href="index.html#info">INFORMATIONS</a></h3></li>
+                <li><h3><a href="#">BILLETTERIE</a></h3></li>
+                <li><h3><a href="works.html">OEUVRES</a></h3></li>
+                <li><h3><a href="artists.html">ARTISTES</a></h3></li>
+                <li><h3><a href="index.html#contact">CONTACT</a></h3></li>
             </ul>
             <a href="../en/index.html">EN</a>
         </nav>
