@@ -19,9 +19,14 @@ h5 + div{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-left: 15px;
 }
 
 .container h5 {
     text-align: center;
+}
+
+.container p {
+    text-decoration: underline;
 }
 
