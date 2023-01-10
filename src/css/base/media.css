@@ -13,3 +13,8 @@ img[alt=photo_de_lartiste] {
     height: 195px;
     width: 195px;
 }
+
+h4 + img {
+    height: 290px;
+    width: auto;
+}
