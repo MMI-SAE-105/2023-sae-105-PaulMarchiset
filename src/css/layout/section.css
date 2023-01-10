@@ -1,3 +1,7 @@
+section {
+    margin: 0 23px;
+}
+
 .homepage {
     background-image: url(/public/img/ocean_homepage.webp);
     width: 100%;
