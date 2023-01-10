@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html lang="f">
+<html lang="fr" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noScroll'">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REALISTIC</title>
+    <link rel="icon" href="/public/icons/logo_realistic.svg">
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 <body>
-    
+    <header>
+        <a href="index.html">
+            <img src="/public/icons/logo_realistic.svg" alt="logo realistic">
+        </a>
+        <div @click="menuIsOpen = ! menuIsOpen">
+            <img class="header__hamburger" src="/public/icons/hamburger.svg" alt="">
+        </div>
+        <nav x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+            <div class="menu__top">
+                <a href="index.html"><img class="menu__icon" src="/public/icons/logo_realistic.svg" alt="fermer le menu"></a>
+                <div @click="menuIsOpen = ! menuIsOpen"><img class="menu__close" src="/public/icons/close.svg" alt="fermer le menu"></div>
+            </div>
+            <ul>
+                <li><a href="index.html#info">INFORMATIONS</a></li>
+                <li><a href="#">BILLETTERIE</a></li>
+                <li><a href="works.html">OEUVRES</a></li>
+                <li><a href="artists.html">ARTISTES</a></li>
+                <li><a href="index.html#contact">CONTACT</a></li>
+            </ul>
+            <a href="../en/index.html">EN</a>
+        </nav>
+    </header>
 </body>
 </html>

@@ -1,0 +1,23 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*normalize*/
+@import "vendors/normalize.css";
+
+/*variables*/
+@import "utils/variables.css";
+
+/*base*/
+@import "base/main.css";
+@import "base/media.css";
+
+/*layout*/
+@import "layout/header.css";
+@import "layout/footer.css";
+@import "layout/forms.css";
+@import "layout/section.css";
+
+/*components*/
+@import "components/menu.css";
+@import "components/article.css";
+@import "components/button.css";
