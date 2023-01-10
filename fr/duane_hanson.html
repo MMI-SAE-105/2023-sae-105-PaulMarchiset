@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noScroll'">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REALISTIC</title>
+    <link rel="icon" href="/public/icons/logo_realistic.svg">
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <script defer src="https://unpkg.com/alpinejs"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img class="header__logo" src="/public/icons/logo_realistic.svg" alt="logo realistic">
+        </a>
+        <div @click="menuIsOpen = ! menuIsOpen">
+            <img class="header__hamburger" src="/public/icons/hamburger.svg" alt="">
+        </div>
+        <nav x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+            <div class="menu__top">
+                <a href="index.html"><img class="header__logo" src="/public/icons/logo_realistic.svg" alt="retourner à l'accueil"></a>
+                <div @click="menuIsOpen = ! menuIsOpen"><img class="menu__close" src="/public/icons/close.svg" alt="fermer le menu"></div>
+            </div>
+            <ul>
+                <li><h3><a href="index.html#info" @click= " menuIsOpen = !menuIsOpen">INFORMATIONS</a></h3></li>
+                <li><h3><a href="#">BILLETTERIE</a></h3></li>
+                <li><h3><a href="works.html">OEUVRES</a></h3></li>
+                <li><h3><a href="artists.html">ARTISTES</a></h3></li>
+                <li><h3><a href="index.html#contact" @click= " menuIsOpen = !menuIsOpen"">CONTACT</a></h3></li>
+            </ul>
+            <h3><a href="../en/index.html">EN</a></h3>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h4>Duane Hanson</h4>
+            <img class="bio" src="/public/img/duane_bio.webp" alt="Duane Hanson">
+            <p><a href="https://www.wikiart.org/fr/duane-hanson">Duane Hanson</a> est un artiste américain connu pour ses sculptures de <span>personnages hyperréalistes</span>. Né en 1925 dans l'État du Minnesota, il a étudié l'art à l'université de l'État du Minnesota et à l'université de Chicago. Ses sculptures, qui sont souvent inspirées de personnes qu'il a photographiées dans la rue, sont réalisées avec une précision incroyable et sont <span>souvent confondues avec de véritables personnes</span>.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 REALISTIC</p>
+        <ul>
+            <li><a href="index.html#info">INFORMATIONS</a></li>
+            <li><a href="#">BILLETTERIE</a></li>
+            <li><a href="works.html">OEUVRES</a></li>
+            <li><a href="artists.html">ARTISTES</a></li>
+        </ul>
+        <p>Projet réalisé dans le cadre d'un exercice pédagogique au département <a href="http://mmimontbeliard.com">MMI de Montbéliard</a></p>
+    </footer>
+</body>
+</html>
