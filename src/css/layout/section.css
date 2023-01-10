@@ -1,5 +1,5 @@
 section {
-    margin: 0 23px;
+    margin: 90px 23px 30px 23px;
 }
 
 .homepage {
@@ -27,6 +27,10 @@ section {
     color: white;
     margin: 0 50px 0 23px;
     top: 515px;
+}
+
+div.homepage + section {
+    margin-top: 0;
 }
 
 .p__underline {
