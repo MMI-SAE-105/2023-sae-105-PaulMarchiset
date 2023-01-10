@@ -5,6 +5,7 @@
     color: black;
     margin: 0;
     height: 100%;
+    text-align: right;
   }
 
 .menu__top {
@@ -18,4 +19,15 @@
     width: 40px;
     height: 40px;
     padding: 10px 12px;
+}
+
+.menu ul {
+    margin-right: 28px
+}
+
+.menu ul + h3 {
+    position: relative;
+    bottom: -73px;
+    right: 33px;
+
 }
