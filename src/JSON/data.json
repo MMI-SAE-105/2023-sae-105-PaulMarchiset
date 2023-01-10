@@ -1,0 +1,46 @@
+[
+    {
+        "nom": "Plein tarif" ,
+        "prix": "11€" 
+    },
+    {
+        "nom":"Tarif réduit",
+        "prix": "7.5€"
+    },
+    {
+        "nom":"13-25ans",
+        "prix": "5€"
+    },
+    {
+        "nom":"Fondation Carier Pass",
+        "prix": "18-50€"
+    },
+    {
+        "nom":"Moins de 13ans",
+        "prix": "Gratuit"
+    },
+    {
+        "nom":"Laissez-passer annuel",
+        "prix": "Gratuit"
+    },
+    {
+        "nom":"Carte Icom",
+        "prix": "Gratuit"
+    },
+    {
+        "nom":"Carte de presse",
+        "prix": "Gratuit"
+    },
+    {
+        "nom":"Carte d'invalidité",
+        "prix": "Gratuit"
+    },
+    {
+        "nom":"Fondation Cartier Pass",
+        "prix": "Gratuit"
+    },
+    {
+        "nom":"Etudiant",
+        "prix": "Gratuit"
+    }
+]
