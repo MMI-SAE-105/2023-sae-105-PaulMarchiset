@@ -36,3 +36,7 @@ h5 + div{
     align-items: center;
 }
 
+.work_page ul {
+    list-style: disc;
+}
+
