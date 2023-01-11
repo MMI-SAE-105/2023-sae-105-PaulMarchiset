@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REALISTIC</title>
+    <title>Chuck Close - REALISTIC</title>
     <link rel="icon" href="/public/icons/logo_realistic.svg">
     <link rel="stylesheet" href="../src/css/styles.css">
     <script defer src="https://unpkg.com/alpinejs"></script>
@@ -15,7 +15,7 @@
             <img class="header__logo" src="/public/icons/logo_realistic.svg" alt="logo realistic">
         </a>
         <div @click="menuIsOpen = ! menuIsOpen">
-            <img class="header__hamburger" src="/public/icons/hamburger.svg" alt="">
+            <img class="header__hamburger" src="/public/icons/hamburger.svg" alt="hamburger menu">
         </div>
         <nav x-show="menuIsOpen" x-transition.duration.800ms class="menu">
             <div class="menu__top">
@@ -43,14 +43,14 @@
                   class="carousel_btn carousel_btn-before"
                   aria-label="slide précedant"
                 > 
-                 <img src="/public/icons/arrow_left.svg" alt="">
+                 <img src="/public/icons/arrow_left.svg" alt="arrow_left">
                 </button
                 ><button
                   @click="$refs.parent.scrollLeft += $refs.parent.clientWidth"
                   class="carousel_btn carousel_btn-after"
                   aria-label="slide suivant"
                 >
-                 <img src="/public/icons/arrow_right.svg" alt="">
+                 <img src="/public/icons/arrow_right.svg" alt="arrow_right">
                 </button>
                 <div
                   class="carousel_parent-screen"
