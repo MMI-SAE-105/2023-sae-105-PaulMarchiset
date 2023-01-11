@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="menuIsOpen && 'noScroll'">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Dodge - REALISTIC</title>
+    <link rel="icon" href="../public/icons/logo_realistic.svg">
+    <link rel="stylesheet" href="/../src/css/styles.css">
+    <script defer src="https://unpkg.com/alpinejs"></script>
+</head>
+<body>
+    <header>
+        <a href="/fr/index.html">
+            <img class="header__logo" src="/public/icons/logo_realistic.svg" alt="logo realistic">
+        </a>
+        <div @click="menuIsOpen = ! menuIsOpen">
+            <img class="header__hamburger" src="/public/icons/hamburger.svg" alt="hamburger menu">
+        </div>
+        <nav x-show="menuIsOpen" x-transition.duration.800ms class="menu">
+            <div class="menu__top">
+                <a href="index.html"><img class="header__logo" src="/public/icons/logo_realistic.svg" alt="retourner à l'accueil"></a>
+                <div @click="menuIsOpen = ! menuIsOpen"><img class="menu__close" src="/public/icons/close.svg" alt="fermer le menu"></div>
+            </div>
+            <ul>
+                <li><h3><a href="/../fr/index.html#info" @click= " menuIsOpen = !menuIsOpen">INFORMATIONS</a></h3></li>
+                <li><h3><a href="#">BILLETTERIE</a></h3></li>
+                <li><h3><a href="/../fr/works.html">OEUVRES</a></h3></li>
+                <li><h3><a href="/../fr/artists.html">ARTISTES</a></h3></li>
+                <li><h3><a href="/../fr/index.html#contact" @click= " menuIsOpen = !menuIsOpen"">CONTACT</a></h3></li>
+            </ul>
+            <h3><a href="../en/index.html">EN</a></h3>
+        </nav>
+    </header>
+    <main>
+        <section class="work_page">
+            <h4>Golden Dodge, Ralph Goings</h4>
+            <img src="/public/img/ralph_1.webp" alt="Golden Dodge">
+            <ul>
+                <li>Date: 1971</li>
+                <li>Genre: Paysage urbain</li>
+                <li>Support : Acrylique, toile</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 REALISTIC</p>
+        <ul>
+            <li><a href="/index.html#info">INFORMATIONS</a></li>
+            <li><a href="#">BILLETTERIE</a></li>
+            <li><a href="/works.html">OEUVRES</a></li>
+            <li><a href="/artists.html">ARTISTES</a></li>
+        </ul>
+        <p>Projet réalisé dans le cadre d'un exercice pédagogique au département <a href="http://mmimontbeliard.com">MMI de Montbéliard</a></p>
+    </footer>
+</body>
+</html>
