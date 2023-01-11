@@ -2,6 +2,13 @@ section {
     margin: 90px 23px 30px 23px;
 }
 
+.index {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .fourOfour {
     overflow: hidden;
     display: flex;
