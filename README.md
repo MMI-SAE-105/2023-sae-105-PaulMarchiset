@@ -2,7 +2,8 @@
 - NOM : Marchiset
 - PRÉNOM : Paul
 - URL du site : https://realistic.paulmarchiset.me
-- URL FIGMA : https://www.figma.com/file/kEthBlSvaYiGA1j3qjnCC1/SAE-105-Marchiset?node-id=1348%3A1331&t=lRCRutMsUYrfs72X-1 
+- URL FIGMA : https://www.figma.com/file/kEthBlSvaYiGA1j3qjnCC1/SAE-105-Marchiset?node-id=1348%3A1331&t=lRCRutMsUYrfs72X-1
+- URL Rapport Lighthouse : https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Frealistic.paulmarchiset.me%2Ffr%2Findex.html&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext 
 
 # Structure de départ pour la SAE 105.
 
