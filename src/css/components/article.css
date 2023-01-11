@@ -46,6 +46,7 @@ h5 + div{
     overflow-x: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
+    overflow-y: hidden;
   }
 
   .carousel_screen {
