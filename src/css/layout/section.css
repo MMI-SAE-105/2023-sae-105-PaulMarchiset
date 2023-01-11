@@ -2,6 +2,30 @@ section {
     margin: 90px 23px 30px 23px;
 }
 
+.fourOfour {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+  }
+
+.fourOfour p {
+    margin: 5px;
+}
+
+.fourOfour p:nth-child(3) {
+    opacity: 0.75;
+}
+
+.fourOfour p:nth-child(4) {
+    opacity: 0.5;
+}
+
+.fourOfour p:nth-child(5) {
+    opacity: 0.25;
+}
+
 .homepage {
     background-image: url(/public/img/ocean_vija_celmins.webp);
     object-fit: fill;
