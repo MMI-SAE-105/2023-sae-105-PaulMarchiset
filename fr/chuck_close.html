@@ -37,6 +37,49 @@
             <h4>Charles Thomas "Chuck" Close</h4>
             <img class="bio" src="/public/img/chuck_bio.webp" alt="chuck close">
             <p><a href="https://www.wikiart.org/fr/chuck-close">Chuck Close</a> est un artiste américain connu pour ses portraits grand format réalistes. Né en 1940 à Monroe, dans l'État de Washington, il a étudié l'art à l'université de Yale. Ses œuvres, qui ont été <span>exposées dans le monde entier</span>, sont caractérisées par une attention exceptionnelle aux détails et une <span>précision de rendu incroyable</span>. Chuck Close est considéré comme l'un des plus importants et des plus <span>influents artistes photoréalistes</span> de sa génération.</p>
+            <carousel x-data="{hrefCourant: '#ecran-1'}">
+                <button
+                  @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth"
+                  class="carousel_btn carousel_btn-before"
+                  aria-label="slide précedant"
+                > 
+                 <img src="/public/icons/arrow_left.svg" alt="">
+                </button
+                ><button
+                  @click="$refs.parent.scrollLeft += $refs.parent.clientWidth"
+                  class="carousel_btn carousel_btn-after"
+                  aria-label="slide suivant"
+                >
+                 <img src="/public/icons/arrow_right.svg" alt="">
+                </button>
+                <div
+                  class="carousel_parent-screen"
+                  x-ref="parent"
+                  @scroll.debounce.250ms.passive="
+          hrefCourant = '#'+
+                            [...$refs.parent.children]
+                             .find(e=>e.getBoundingClientRect().x>=0)
+                             .id
+                                               "
+                >
+                  <div id="ecran-1" class="carousel_screen">
+                    <figure>
+                      <img
+                        src="/public/img/chuck_1.webp"
+                        alt="chuck close"
+                      />
+                    </figure>
+                  </div>
+                  <div id="ecran-2" class="carousel_screen">
+                    <figure>
+                      <img
+                        src="/public/img/chuck_2.webp"
+                        alt="chuck close"
+                      />
+                    </figure>
+                  </div>
+                </div>
+              </carousel>
         </section>
     </main>
     <footer>

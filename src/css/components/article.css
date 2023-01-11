@@ -40,3 +40,66 @@ h5 + div{
     list-style: disc;
 }
 
+.carousel_parent-screen {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+
+  .carousel_screen {
+    width: 100%;
+    flex: none;
+    scroll-snap-align: start;
+  }
+
+  .carousel_screen figure {
+    margin: 0 20px 0 20px;
+  }
+
+  .caroussel_liste-liens {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    border-radius: 16px;
+    gap: 1rem;
+    list-style: none;
+  }
+
+  .caroussel_liste-liens :hover {
+    background-color: rgb(109, 106, 106);
+  }
+
+  .caroussel_lien {
+    text-decoration: none;
+    color: black;
+  }
+
+  carousel {
+    position: relative;
+  }
+
+  .carousel_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    background: rgba(0, 0, 0);
+    border: none;
+    display: grid;
+    place-content: center;
+    color: #fff;
+  }
+
+  .carousel_btn-before {
+    left: 0;
+    top: 50%;
+  }
+
+  .carousel_btn-after {
+    right: 0;
+    top: 50%;
+  }
+

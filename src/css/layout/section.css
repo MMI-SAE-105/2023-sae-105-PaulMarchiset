@@ -3,10 +3,11 @@ section {
 }
 
 .homepage {
-    background-image: url(/public/img/ocean_homepage.webp);
+    background-image: url(/public/img/ocean_vija_celmins.webp);
+    object-fit: fill;
     width: 100%;
-    height: 750px;
-    object-fit: cover;
+    height: 720px;
+    background-repeat: no-repeat;
 }
 
 .homepage h1 {
