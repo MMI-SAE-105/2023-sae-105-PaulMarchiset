@@ -33,6 +33,10 @@ section {
     opacity: 0.25;
 }
 
+.fourOfour p:nth-child(6) {
+    opacity: 0;
+}
+
 .homepage {
     background-image: url(/public/img/ocean_vija_celmins.webp);
     object-fit: fill;
