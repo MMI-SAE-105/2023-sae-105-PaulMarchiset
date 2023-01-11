@@ -69,3 +69,8 @@ ul {
 span {
     font-weight: 500;
 }
+
+.noScroll,
+.noScroll body {
+    overflow: hidden;
+}
