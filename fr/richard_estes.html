@@ -36,7 +36,50 @@
         <section>
             <h4>Richard Estes</h4>
             <img class="bio" src="/public/img/richard_bio.webp" alt="Richard Estes">
-            <p><a href="https://www.wikiart.org/fr/richard-estes">Richard Estes est un artiste américain réputé pour ses peintures de <span>paysages urbains hyperréalistes</span>. Sa carrière artistique a débuté après ses études à l'université de Chicago et à l'Art Institute de Chicago. Ses œuvres, qui ont été présentées dans de nombreuses expositions internationales, sont connues pour leur précision et leur attention aux détails. Richard Estes est <span>considéré comme l'un des artistes photoréalistes les plus importants</span> et les plus influents de sa génération.</p>
+            <p><a href="https://www.wikiart.org/fr/richard-estes">Richard Estes</a> est un artiste américain réputé pour ses peintures de <span>paysages urbains hyperréalistes</span>. Sa carrière artistique a débuté après ses études à l'université de Chicago et à l'Art Institute de Chicago. Ses œuvres, qui ont été présentées dans de nombreuses expositions internationales, sont connues pour leur précision et leur attention aux détails. Richard Estes est <span>considéré comme l'un des artistes photoréalistes les plus importants</span> et les plus influents de sa génération.</p>
+            <carousel x-data="{hrefCourant: '#ecran-1'}">
+                <button
+                  @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth"
+                  class="carousel_btn carousel_btn-before"
+                  aria-label="slide précedant"
+                > 
+                 <img src="/public/icons/arrow_left.svg" alt="">
+                </button
+                ><button
+                  @click="$refs.parent.scrollLeft += $refs.parent.clientWidth"
+                  class="carousel_btn carousel_btn-after"
+                  aria-label="slide suivant"
+                >
+                 <img src="/public/icons/arrow_right.svg" alt="">
+                </button>
+                <div
+                  class="carousel_parent-screen"
+                  x-ref="parent"
+                  @scroll.debounce.250ms.passive="
+          hrefCourant = '#'+
+                            [...$refs.parent.children]
+                             .find(e=>e.getBoundingClientRect().x>=0)
+                             .id
+                                               "
+                >
+                  <div id="ecran-1" class="carousel_screen">
+                    <figure>
+                        <a href="/fr/works/richard_work_1.html"><img
+                        src="/public/img/richard_1.webp"
+                        alt="chuck close"
+                      /></a>
+                    </figure>
+                  </div>
+                  <div id="ecran-2" class="carousel_screen">
+                    <figure>
+                        <a href="/fr/works/richard_work_2.html"><img
+                        src="/public/img/richard_2.webp"
+                        alt="chuck close"
+                      /></a>
+                    </figure>
+                  </div>
+                </div>
+              </carousel>
         </section>
     </main>
     <footer>

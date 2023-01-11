@@ -37,6 +37,49 @@
             <h4>Ralph Goings</h4>
             <img class="bio" src="/public/img/ralph_bio.webp" alt="Ralph Goings">
             <p><a href="https://www.wikiart.org/fr/ralph-goings">Ralph Goings</a> est surtout connu pour ses peintures de scènes de la vie quotidienne, comme des diners, des stations-service et des magasins. Ses œuvres sont extrêmement réalistes et précises, et sont souvent <span>inspirées de photos ou de films qu'il a prises lui-même</span>. Goings utilise une technique de peinture à l'huile qui lui permet de reproduire avec une grande précision les détails de chaque scène qu'il peint. Ses peintures sont souvent considérées comme des <span>commentaires sur la société</span> et la culture américaine des années 1950 et 1960.</p>
+            <carousel x-data="{hrefCourant: '#ecran-1'}">
+                <button
+                  @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth"
+                  class="carousel_btn carousel_btn-before"
+                  aria-label="slide précedant"
+                > 
+                 <img src="/public/icons/arrow_left.svg" alt="">
+                </button
+                ><button
+                  @click="$refs.parent.scrollLeft += $refs.parent.clientWidth"
+                  class="carousel_btn carousel_btn-after"
+                  aria-label="slide suivant"
+                >
+                 <img src="/public/icons/arrow_right.svg" alt="">
+                </button>
+                <div
+                  class="carousel_parent-screen"
+                  x-ref="parent"
+                  @scroll.debounce.250ms.passive="
+          hrefCourant = '#'+
+                            [...$refs.parent.children]
+                             .find(e=>e.getBoundingClientRect().x>=0)
+                             .id
+                                               "
+                >
+                  <div id="ecran-1" class="carousel_screen">
+                    <figure>
+                        <a href="/fr/works/ralph_work_1.html"><img
+                        src="/public/img/ralph_1.webp"
+                        alt="chuck close"
+                      /></a>
+                    </figure>
+                  </div>
+                  <div id="ecran-2" class="carousel_screen">
+                    <figure>
+                        <a href="/fr/works/ralph_work_2.html"><img
+                        src="/public/img/ralph_2.webp"
+                        alt="chuck close"
+                      /></a>
+                    </figure>
+                  </div>
+                </div>
+              </carousel>
         </section>
     </main>
     <footer>

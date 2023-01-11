@@ -37,6 +37,49 @@
             <h4>Duane Hanson</h4>
             <img class="bio" src="/public/img/duane_bio.webp" alt="Duane Hanson">
             <p><a href="https://www.wikiart.org/fr/duane-hanson">Duane Hanson</a> est un artiste américain connu pour ses sculptures de <span>personnages hyperréalistes</span>. Né en 1925 dans l'État du Minnesota, il a étudié l'art à l'université de l'État du Minnesota et à l'université de Chicago. Ses sculptures, qui sont souvent inspirées de personnes qu'il a photographiées dans la rue, sont réalisées avec une précision incroyable et sont <span>souvent confondues avec de véritables personnes</span>.</p>
+            <carousel x-data="{hrefCourant: '#ecran-1'}">
+                <button
+                  @click="$refs.parent.scrollLeft -= $refs.parent.clientWidth"
+                  class="carousel_btn carousel_btn-before"
+                  aria-label="slide précedant"
+                > 
+                 <img src="/public/icons/arrow_left.svg" alt="">
+                </button
+                ><button
+                  @click="$refs.parent.scrollLeft += $refs.parent.clientWidth"
+                  class="carousel_btn carousel_btn-after"
+                  aria-label="slide suivant"
+                >
+                 <img src="/public/icons/arrow_right.svg" alt="">
+                </button>
+                <div
+                  class="carousel_parent-screen"
+                  x-ref="parent"
+                  @scroll.debounce.250ms.passive="
+          hrefCourant = '#'+
+                            [...$refs.parent.children]
+                             .find(e=>e.getBoundingClientRect().x>=0)
+                             .id
+                                               "
+                >
+                  <div id="ecran-1" class="carousel_screen">
+                    <figure>
+                        <a href="/fr/works/duane_work_1.html"><img
+                        src="/public/img/duane_1.webp"
+                        alt="chuck close"
+                      /></a>
+                    </figure>
+                  </div>
+                  <div id="ecran-2" class="carousel_screen">
+                    <figure>
+                        <a href="/fr/works/duane_work_2.html"><img
+                        src="/public/img/duane_2.webp"
+                        alt="chuck close"
+                      /></a>
+                    </figure>
+                  </div>
+                </div>
+              </carousel>
         </section>
     </main>
     <footer>
